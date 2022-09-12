@@ -20,8 +20,8 @@ public class Test2 : Control
         /// THESE THREE LINES:
         
         //httpRequest.Request("https://www.reddit.com/r/worldnews/"); // HTTPRequest
-        //this.DoHTTPRequest().ContinueWith(t => { }); // HTTPClient
-        this.DoDotNetHttpClient().ContinueWith(t => { }); // HttpClient (dotnet)
+        this.DoHTTPClient().ContinueWith(t => { }); // HTTPClient
+        //this.DoDotNetHttpClient().ContinueWith(t => { }); // HttpClient (dotnet)
     }
     
     private async Task DoDotNetHttpClient()
@@ -46,7 +46,7 @@ public class Test2 : Control
         }
     }
 
-    public async Task DoHTTPRequest()
+    public async Task DoHTTPClient()
     {
         Error err;
         HTTPClient http = new HTTPClient(); // Create the client.
